@@ -1,7 +1,9 @@
 /**
  * Created by Jeffrey on 16/3/25.
  */
-System.register(['angular2/core', '../datasource/hero.datasouce'], function(exports_1) {
+System.register(['angular2/core', '../datasource/hero.datasouce'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -36,12 +38,15 @@ System.register(['angular2/core', '../datasource/hero.datasouce'], function(expo
                      // 2 seconds
                     );
                 };
+                HeroService.prototype.getHero = function (id) {
+                    return Promise.resolve(hero_datasouce_1.HEROES).then(function (heroes) { return heroes.filter(function (hero) { return hero.id === id; })[0]; });
+                };
                 HeroService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [])
                 ], HeroService);
                 return HeroService;
-            })();
+            }());
             exports_1("HeroService", HeroService);
         }
     }
