@@ -1,5 +1,9 @@
 import {Hero} from '../data-model/hero';
 
+/**
+ * 数据源
+ * @type {{id: number, name: string}[]}
+ */
 export var HEROES : Hero[] = [
   { "id": 11, "name": "Mr. Nice" },
   { "id": 12, "name": "Narco" },

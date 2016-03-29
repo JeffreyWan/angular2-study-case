@@ -1,10 +1,12 @@
-System.register([], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
+System.register([], function(exports_1) {
     var HEROES;
     return {
         setters:[],
         execute: function() {
+            /**
+             * 数据源
+             * @type {{id: number, name: string}[]}
+             */
             exports_1("HEROES", HEROES = [
                 { "id": 11, "name": "Mr. Nice" },
                 { "id": 12, "name": "Narco" },

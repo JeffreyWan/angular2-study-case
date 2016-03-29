@@ -1,9 +1,7 @@
 /**
  * Created by Jeffrey on 16/3/28.
  */
-System.register(["angular2/core", "../../services/hero.service", "angular2/router"], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
+System.register(["angular2/core", "../../services/hero.service", "angular2/router"], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -28,6 +26,11 @@ System.register(["angular2/core", "../../services/hero.service", "angular2/route
             }],
         execute: function() {
             DashboardComponent = (function () {
+                /**
+                 * 声明创建服务和路由
+                 * @param _heroService
+                 * @param _router
+                 */
                 function DashboardComponent(_heroService, _router) {
                     this._heroService = _heroService;
                     this._router = _router;
@@ -52,7 +55,7 @@ System.register(["angular2/core", "../../services/hero.service", "angular2/route
                     __metadata('design:paramtypes', [hero_service_1.HeroService, router_1.Router])
                 ], DashboardComponent);
                 return DashboardComponent;
-            }());
+            })();
             exports_1("DashboardComponent", DashboardComponent);
         }
     }

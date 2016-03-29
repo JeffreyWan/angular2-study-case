@@ -27,6 +27,9 @@ import {HeroDetailComponent} from "../hero_detail/hero-detail";
 })
 
 
+/**
+ * 路由配置
+ */
 @RouteConfig([
     {
         path: '/heroes',

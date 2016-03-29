@@ -33,6 +33,11 @@ export class DashboardComponent implements OnInit {
             .then(heroes => this.heroes = heroes.slice(1, 5));
     }
 
+    /**
+     * 声明创建服务和路由
+     * @param _heroService
+     * @param _router
+     */
     constructor(
         private _heroService:HeroService,
         private _router: Router

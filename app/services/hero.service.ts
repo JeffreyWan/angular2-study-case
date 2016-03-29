@@ -8,10 +8,15 @@ import {Hero} from "../data-model/hero";
 
  @Injectable()
  export class HeroService {
+
      getHeroes() {
         return Promise.resolve(HEROES);
      }
 
+     /**
+      * 延迟2秒获取数据
+      * @returns {Promise<Hero[]>|Promise}
+      */
      // See the "Take it slow" appendix
      getHeroesSlowly() {
          return new Promise<Hero[]>(resolve =>
